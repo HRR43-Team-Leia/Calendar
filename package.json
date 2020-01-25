@@ -1,0 +1,39 @@
+{
+  "name": "calendar",
+  "description": "> Project description",
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {},
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "css-loader": "^3.4.2",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "react": "^16.12.0",
+    "react-dev": "0.0.1",
+    "style-loader": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "faker": "^4.1.0",
+    "nodemon": "^2.0.2",
+    "webpack": "^4.41.5"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRR43-Team-Leia/Calendar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HRR43-Team-Leia/Calendar/issues"
+  },
+  "homepage": "https://github.com/HRR43-Team-Leia/Calendar#readme"
+}
