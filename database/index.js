@@ -8,12 +8,13 @@ mongoose.connect('mongodb://localhost/calendar', {
 const schema = require('./schema.js')
 const dateSchema = new mongoose.Schema({
   exp_id: Number,
-  dates: {}
+  dates: []
 });
-var Calendar = mongoose.model('D', dateSchema);
+var Calendar = mongoose.model('Experience', dateSchema);
 
 var get = (exp_id,cb1,cb2) => {
   Calendar.find({exp_id: exp_id}).exec((err,data) => {
+
     if (err) {
       cb1();
     } else {
