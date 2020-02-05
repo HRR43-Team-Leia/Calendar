@@ -1,18 +1,5 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/calendar', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+var calendarGenerator = () => {
 
-const dateSchema = new mongoose.Schema({
-  exp_id: Number,
-  dates: []
-});
-
-var dateInCalendar = mongoose.model('Experience', dateSchema);
-
-//Created seed for the next 6 months
-const seed = () => {
   var today = new Date;
   let month = today.getMonth();
   let year = today.getFullYear();
@@ -21,6 +8,7 @@ const seed = () => {
   var data = [];
   var neededYear = 0;
   var nextMonth = 0;
+
   //comes with year, month, neededYear, nextMonth;
   for (let x = 0; x < howManyMonthToGenerate ; x++) {
     if (month === 11) {
@@ -31,7 +19,7 @@ const seed = () => {
       nextMonth = month + 1;
     }
     let daysInMonth = new Date(neededYear, nextMonth, 0).getDate();
-
+    //console.log(month, daysInMonth);
     //empty calendar 6*7
     var cdr = [];
     for (let i = 0; i < 6; i++) {
@@ -40,6 +28,7 @@ const seed = () => {
         cdr[i][j] = {};
       }
     }
+
 
     let weekdayOfFirstDayInMonth = new Date(year, month, 1).getDay();
     let line = 0;
@@ -72,18 +61,5 @@ const seed = () => {
   }
   return data;
 }
-
-var counter = 1;
-for (let i = 1; i <= 100; i++) {
-  let calendar = new dateInCalendar({
-    exp_id: i,
-    dates : seed()
-  });
-  calendar.save((err)=>{
-    if (err) {console.log(err)};
-    counter ++;
-    if (counter === 101) { mongoose.connection.close() }
-  });
-
-}
-
+//console.log(calendarGenerator());
+module.exports.cdrGen = calendarGenerator;

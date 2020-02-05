@@ -29,11 +29,7 @@ describe('TESTS', () => {
     await page.goto(pageUrl, {waitUntil: 'networkidle2'});
   })
 
-  test('first test', async () => {
-    var div = 'h1'
-    const title = await page.$eval(div, e => e.textContent);
-    expect(title).toEqual('React Works!')
-  });
+
 
   test('renderds something', async ()=> {
     const tree = renderer
