@@ -1,17 +1,24 @@
 import React from 'react';
-import Row from '../components/Row.jsx';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Row from './Row.jsx';
 
-var Month = (props) => (
-  <div>{Array.isArray(props.table)}
+const Mnth = styled.div`
+  width: 200px;
+  background-color: red;
+`;
+
+const Month = ({ month }) => (
+  <Mnth>
     <table>
-      <caption>{props.month.month}</caption>
+      <caption>{month.month}</caption>
       <tbody>
-        {props.month.days.map((row) =>
+        {month.days.map((row) =>
           <Row days = {row} />
         )}
       </tbody>
     </table>
-  </div>
+  </Mnth>
 );
 
 export default Month;
