@@ -5,10 +5,13 @@ import styled, { keyframes } from 'styled-components';
 import Calendar from './Calendar.jsx';
 
 const CalendarArea = styled.div`
-  position: relative;
-  height: 450px;
-  width: 800px;
-  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
   background-color: wheat;
 `;
 
@@ -60,10 +63,5 @@ class App extends Component {
 App.propTypes = {
   expId: PropTypes.number,
 };
-App.defaultProps = {
-  expId: 1,
-};
-
-
 
 export default App;
