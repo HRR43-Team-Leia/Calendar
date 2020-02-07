@@ -8,7 +8,8 @@ const port = process.env.PORT || 3005;
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:4000',
+  origin: 'http://18.223.132.12:4000',
+
 }));
 app.use(express.static('public'));
 app.use(bp.json());
