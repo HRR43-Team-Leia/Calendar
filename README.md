@@ -33,7 +33,10 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
+npm run seed
+npm run react-dev
+npm server-dev
 ```
-
+The proxy-html set the name of the div to: "calendar".
+Add this to the proxy-html: <script src="http://localhost:3005/bundle.js"></script>

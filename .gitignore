@@ -4,7 +4,6 @@
 ## NPM ##
 npm
 npm-debug.log
-node_modules/
 
 pids
 *.pid
@@ -21,6 +20,6 @@ coverage
 .grunt
 
 # Compiled Dirs (http://nodejs.org/api/addons.html)
-build/
-dist/
+
 config/
+node_modules
