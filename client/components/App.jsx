@@ -32,7 +32,7 @@ class App extends Component {
 
   componentDidMount() {
     const { expId } = this.state;
-    axios.get(`http://localhost:3005/calendar/${expId}`)
+    axios.get(`http://18.223.132.12:3005/calendar/${expId}`)
       .then((res) => {
         this.setState({
           months: res.data[0].dates,
