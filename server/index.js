@@ -12,7 +12,7 @@ app.use(cors({
 }));
 app.use(express.static('public'));
 app.use(bp.json());
-app.engine('html', ejs.renderFile);
+// app.engine('html', ejs.renderFile);
 
 app.get('/:id', (req, res) => {
   res.render('../public/index.html');

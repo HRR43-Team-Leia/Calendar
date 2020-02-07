@@ -7,11 +7,7 @@ import Calendar from './Calendar.jsx';
 const CalendarArea = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding-left: 50px;
-  padding-right: 50px;
   padding-bottom: 100px;
-  display: flex;
-  flex-direction: column;
   background-color: wheat;
 `;
 

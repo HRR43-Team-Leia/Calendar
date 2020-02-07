@@ -5,23 +5,20 @@ import styled from 'styled-components';
 import Month from './Month.jsx';
 
 const Wrapper = styled.div`
-  background-color: brown;
-  // display: flex;
-  // flex-flow: row nowrap;
-  // align-items: flex-start;
-  // justify-content: left;
+background-color: brown;
+overflow: hidden;
+width: 400px;
 `;
 
 const Slider = styled.div`
-  position: relative
-  top: 0;
-  left: 300px;
+position: relative;
+height: 90%;
+width: 100px;
+left: -50%;
 
+display: flex;
+flex-flow: row;
 
-  //transition: left 0.3s;
-
-  display: flex;
-  flex-flow: row nowrap;
 `;
 
 const Calendar = ({ months }) => (

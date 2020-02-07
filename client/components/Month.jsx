@@ -4,8 +4,13 @@ import styled from 'styled-components';
 import Row from './Row.jsx';
 
 const Mnth = styled.div`
-  width: 200px;
+  display; flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
   background-color: red;
+  padding-right: 20px;
 `;
 
 const Month = ({ month }) => (
@@ -22,3 +27,4 @@ const Month = ({ month }) => (
 );
 
 export default Month;
+
