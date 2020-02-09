@@ -15,7 +15,7 @@ const whitelist = [
   'http://18.222.165.232:4000', //Dan proxy
   'http://18.223.132.12:4000', //my proxy
   'http://18.217.113.225:4000', //Yer proxy
-  'http://localhost:3005'  //my service
+  'http://18.223.132.12:3005'  //my service
 ];
 const corsOptions = {
   origin: (origin, callback) => {
@@ -31,7 +31,7 @@ app.use(express.static('public'));
 app.use(bp.json());
 // app.engine('html', ejs.renderFile);
 
-app.get('/:id', (req, res) => {
+app.get('/:id', cors(corsOptions), (req, res) => {
   res.render('../public/index.html');
 });
 
