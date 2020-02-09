@@ -31,7 +31,7 @@ app.use(express.static('public'));
 app.use(bp.json());
 app.engine('html', ejs.renderFile);
 
-app.get('/:id', cors(corsOptions), (req, res) => {
+app.get('/:id', (req, res) => {
   res.render('../public/index.html');
 });
 
