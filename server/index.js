@@ -39,7 +39,6 @@ app.get('/calendar/:id/', cors(corsOptions), (req, res) => {
   db.get(req.params.id,
     () => { res.sendStatus(400); },
     (data) => { res.send(data); });
-  res.render('../public/index.html');
 });
 
 app.listen(port, () => { console.log(`Listening on port ${port}`); });
