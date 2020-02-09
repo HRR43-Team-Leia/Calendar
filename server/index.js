@@ -35,7 +35,7 @@ app.get('/:id', (req, res) => {
   res.render('../public/index.html');
 });
 
-app.get('/calendar/:id', cors(corsOptions), (req, res) => {
+app.get('/calendar/:id/', cors(corsOptions), (req, res) => {
   db.get(req.params.id,
     () => { res.sendStatus(400); },
     (data) => { res.send(data); });
