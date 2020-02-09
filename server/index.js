@@ -15,7 +15,8 @@ const whitelist = [
   'http://18.222.165.232:4000', //Dan proxy
   'http://18.223.132.12:4000', //my proxy
   'http://18.217.113.225:4000', //Yer proxy
-  'http://18.223.132.12:3005',  //my service
+  'http://18.223.132.12:3005',
+  'http://localhost:3005' //my service
 ];
 const corsOptions = {
   origin: (origin, callback) => {
