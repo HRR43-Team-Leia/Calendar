@@ -6,6 +6,7 @@ import Calendar from './Calendar.jsx';
 
 
 const CalendarArea = styled.div`
+max-width: 1200px;
 font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 font-size: 14px;
 line-height: 1.6;
